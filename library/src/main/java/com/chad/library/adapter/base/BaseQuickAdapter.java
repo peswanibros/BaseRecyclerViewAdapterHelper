@@ -17,17 +17,17 @@ package com.chad.library.adapter.base;
 
 import android.animation.Animator;
 import android.content.Context;
-import android.support.annotation.IdRes;
-import android.support.annotation.IntDef;
-import android.support.annotation.IntRange;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.LayoutParams;
-import android.support.v7.widget.StaggeredGridLayoutManager;
+import androidx.annotation.IdRes;
+import androidx.annotation.IntDef;
+import androidx.annotation.IntRange;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.LayoutParams;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -819,7 +819,7 @@ public abstract class BaseQuickAdapter<T, K extends BaseViewHolder> extends Recy
     /**
      * Called when a view created by this adapter has been attached to a window.
      * simple to solve item will layout using all
-     * {@link #setFullSpan(RecyclerView.ViewHolder)}
+     * {@link #setFullSpan( RecyclerView.ViewHolder)}
      *
      * @param holder
      */
@@ -1394,7 +1394,7 @@ public abstract class BaseQuickAdapter<T, K extends BaseViewHolder> extends Recy
     }
 
     /**
-     * Call before {@link RecyclerView#setAdapter(RecyclerView.Adapter)}
+     * Call before {@link RecyclerView#setAdapter( RecyclerView.Adapter)}
      *
      * @param isHeadAndEmpty false will not show headView if the data is empty true will show emptyView and headView
      */
@@ -1404,7 +1404,7 @@ public abstract class BaseQuickAdapter<T, K extends BaseViewHolder> extends Recy
 
     /**
      * set emptyView show if adapter is empty and want to show headview and footview
-     * Call before {@link RecyclerView#setAdapter(RecyclerView.Adapter)}
+     * Call before {@link RecyclerView#setAdapter( RecyclerView.Adapter)}
      *
      * @param isHeadAndEmpty
      * @param isFootAndEmpty
@@ -1580,7 +1580,7 @@ public abstract class BaseQuickAdapter<T, K extends BaseViewHolder> extends Recy
     }
 
     /**
-     * {@link #addAnimation(RecyclerView.ViewHolder)}
+     * {@link #addAnimation( RecyclerView.ViewHolder)}
      *
      * @param firstOnly true just show anim when first loading false show anim when load the data every time
      */

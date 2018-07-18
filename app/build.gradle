@@ -1,12 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+
+    compileSdkVersion project.ext.myCompileSdkVersion
+    buildToolsVersion project.ext.myBuildToolsVersion
 
     defaultConfig {
         applicationId "com.chad.baserecyclerviewadapterhelper"
-        minSdkVersion 14
-        targetSdkVersion 27
+        minSdkVersion project.ext.myMinSdkVersion
+        targetSdkVersion project.ext.myTargetSdkVersion
         versionCode 5
         versionName "2.1"
     }
@@ -16,7 +18,7 @@ android {
             zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-        
+
     }
     dataBinding {
         enabled = true
@@ -28,9 +30,9 @@ dependencies {
     implementation project(path: ':library')
     implementation project(':material-spinner-1.0.5')
     implementation 'com.github.bumptech.glide:glide:3.7.0'
-    implementation 'com.android.support:design:27.1.1'
-    implementation 'com.android.support:cardview-v7:27.1.1'
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.google.android.material:material:1.0.0-beta01'
+    implementation 'androidx.cardview:cardview:1.0.0-beta01'
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
     implementation 'com.kyleduo.switchbutton:library:2.0.0'
     implementation 'com.orhanobut:logger:2.1.1'
 }
